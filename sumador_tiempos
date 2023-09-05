@@ -1,0 +1,17 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
+
+entity suma_tiempo is
+	port(
+		A,H: in std_logic; 
+		B,C: in std_logic_Vector(4 downto 0); 
+		D,F,I: in std_logic_vector(2 downto 0);  
+		E,G: in std_logic_Vector(3 downto 0);
+		S: out std_logic_vector(7 downto 0));
+end suma_tiempo;
+
+architecture solucion of suma_tiempo is
+	begin
+		S<=("0000000"&A)+("000"&B)+("000"&C)+("00000"&D)+("0000"&E)+("00000"&F)+("0000"&G)+("0000000"&H)+("00000"&I);
+end solucion;
